@@ -15,7 +15,8 @@ sed -i -e '1s/$/^e82d730/g' feeds.conf.default
 sed -i -e '2s/$/^974fb04/g' feeds.conf.default
 sed -i -e '3s/$/^54fd237/g' feeds.conf.default
 sed -i -e '4s/$/^2071d9f/g' feeds.conf.default
-
+sed -i "/Boos4721/d" "feeds.conf.default"
+sed -i '$a src-git Boos4721 https://github.com/Boos4721/OpenWrt-Packages' feeds.conf.default
 ./scripts/feeds update -a -f
 ./scripts/feeds install -a -f
 
